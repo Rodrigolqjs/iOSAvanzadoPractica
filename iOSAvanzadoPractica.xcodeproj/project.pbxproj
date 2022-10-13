@@ -9,23 +9,37 @@
 /* Begin PBXBuildFile section */
 		5BF7E86928F78F0A0024ECF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7E86828F78F0A0024ECF8 /* AppDelegate.swift */; };
 		5BF7E86B28F78F0A0024ECF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7E86A28F78F0A0024ECF8 /* SceneDelegate.swift */; };
-		5BF7E86D28F78F0A0024ECF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7E86C28F78F0A0024ECF8 /* ViewController.swift */; };
-		5BF7E87028F78F0A0024ECF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF7E86E28F78F0A0024ECF8 /* Main.storyboard */; };
 		5BF7E87328F78F0A0024ECF8 /* iOSAvanzadoPractica.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7E87128F78F0A0024ECF8 /* iOSAvanzadoPractica.xcdatamodeld */; };
 		5BF7E87528F78F0B0024ECF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BF7E87428F78F0B0024ECF8 /* Assets.xcassets */; };
 		5BF7E87828F78F0B0024ECF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF7E87628F78F0B0024ECF8 /* LaunchScreen.storyboard */; };
+		5BF7E88428F792D90024ECF8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF7E88328F792D90024ECF8 /* Login.storyboard */; };
+		5BF7E88628F792E50024ECF8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7E88528F792E50024ECF8 /* LoginViewController.swift */; };
+		5BF7E88828F792F00024ECF8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7E88728F792F00024ECF8 /* LoginViewModel.swift */; };
+		5BF7E88B28F79EBF0024ECF8 /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7E88A28F79EBF0024ECF8 /* NetworkModel.swift */; };
+		5BF7E89128F7BDC30024ECF8 /* HeroesMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BF7E89028F7BDC30024ECF8 /* HeroesMenu.storyboard */; };
+		5BF7E89328F7BDD00024ECF8 /* HeroesMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7E89228F7BDD00024ECF8 /* HeroesMenuViewController.swift */; };
+		5BF7E89528F7BDE50024ECF8 /* HeroesMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7E89428F7BDE50024ECF8 /* HeroesMenuViewModel.swift */; };
+		5BF7E89728F7C6490024ECF8 /* KeyChainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7E89628F7C6490024ECF8 /* KeyChainHelper.swift */; };
+		5BF7E89928F7CCBA0024ECF8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF7E89828F7CCBA0024ECF8 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5BF7E86528F78F0A0024ECF8 /* iOSAvanzadoPractica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAvanzadoPractica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF7E86828F78F0A0024ECF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BF7E86A28F78F0A0024ECF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BF7E86C28F78F0A0024ECF8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5BF7E86F28F78F0A0024ECF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5BF7E87228F78F0A0024ECF8 /* iOSAvanzadoPractica.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSAvanzadoPractica.xcdatamodel; sourceTree = "<group>"; };
 		5BF7E87428F78F0B0024ECF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BF7E87728F78F0B0024ECF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BF7E87928F78F0C0024ECF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BF7E88328F792D90024ECF8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		5BF7E88528F792E50024ECF8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5BF7E88728F792F00024ECF8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		5BF7E88A28F79EBF0024ECF8 /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		5BF7E89028F7BDC30024ECF8 /* HeroesMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroesMenu.storyboard; sourceTree = "<group>"; };
+		5BF7E89228F7BDD00024ECF8 /* HeroesMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMenuViewController.swift; sourceTree = "<group>"; };
+		5BF7E89428F7BDE50024ECF8 /* HeroesMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMenuViewModel.swift; sourceTree = "<group>"; };
+		5BF7E89628F7C6490024ECF8 /* KeyChainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainHelper.swift; sourceTree = "<group>"; };
+		5BF7E89828F7CCBA0024ECF8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +72,95 @@
 		5BF7E86728F78F0A0024ECF8 /* iOSAvanzadoPractica */ = {
 			isa = PBXGroup;
 			children = (
+				5BF7E88C28F7BDA10024ECF8 /* HeroesMenu */,
+				5BF7E88928F79EB30024ECF8 /* Utils */,
+				5BF7E87F28F78F9C0024ECF8 /* Login */,
 				5BF7E86828F78F0A0024ECF8 /* AppDelegate.swift */,
 				5BF7E86A28F78F0A0024ECF8 /* SceneDelegate.swift */,
-				5BF7E86C28F78F0A0024ECF8 /* ViewController.swift */,
-				5BF7E86E28F78F0A0024ECF8 /* Main.storyboard */,
 				5BF7E87428F78F0B0024ECF8 /* Assets.xcassets */,
 				5BF7E87628F78F0B0024ECF8 /* LaunchScreen.storyboard */,
 				5BF7E87928F78F0C0024ECF8 /* Info.plist */,
 				5BF7E87128F78F0A0024ECF8 /* iOSAvanzadoPractica.xcdatamodeld */,
 			);
 			path = iOSAvanzadoPractica;
+			sourceTree = "<group>";
+		};
+		5BF7E87F28F78F9C0024ECF8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5BF7E88228F792CA0024ECF8 /* ViewModels */,
+				5BF7E88128F792C60024ECF8 /* Controllers */,
+				5BF7E88028F792BD0024ECF8 /* Views */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5BF7E88028F792BD0024ECF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BF7E88328F792D90024ECF8 /* Login.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BF7E88128F792C60024ECF8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BF7E88528F792E50024ECF8 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BF7E88228F792CA0024ECF8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5BF7E88728F792F00024ECF8 /* LoginViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		5BF7E88928F79EB30024ECF8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5BF7E88A28F79EBF0024ECF8 /* NetworkModel.swift */,
+				5BF7E89628F7C6490024ECF8 /* KeyChainHelper.swift */,
+				5BF7E89828F7CCBA0024ECF8 /* CoreDataManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		5BF7E88C28F7BDA10024ECF8 /* HeroesMenu */ = {
+			isa = PBXGroup;
+			children = (
+				5BF7E88F28F7BDB10024ECF8 /* ViewModels */,
+				5BF7E88E28F7BDAC0024ECF8 /* Controllers */,
+				5BF7E88D28F7BDA90024ECF8 /* Views */,
+			);
+			path = HeroesMenu;
+			sourceTree = "<group>";
+		};
+		5BF7E88D28F7BDA90024ECF8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BF7E89028F7BDC30024ECF8 /* HeroesMenu.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BF7E88E28F7BDAC0024ECF8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BF7E89228F7BDD00024ECF8 /* HeroesMenuViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BF7E88F28F7BDB10024ECF8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5BF7E89428F7BDE50024ECF8 /* HeroesMenuViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +223,8 @@
 			files = (
 				5BF7E87828F78F0B0024ECF8 /* LaunchScreen.storyboard in Resources */,
 				5BF7E87528F78F0B0024ECF8 /* Assets.xcassets in Resources */,
-				5BF7E87028F78F0A0024ECF8 /* Main.storyboard in Resources */,
+				5BF7E88428F792D90024ECF8 /* Login.storyboard in Resources */,
+				5BF7E89128F7BDC30024ECF8 /* HeroesMenu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +235,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BF7E89728F7C6490024ECF8 /* KeyChainHelper.swift in Sources */,
+				5BF7E89328F7BDD00024ECF8 /* HeroesMenuViewController.swift in Sources */,
+				5BF7E88B28F79EBF0024ECF8 /* NetworkModel.swift in Sources */,
+				5BF7E88628F792E50024ECF8 /* LoginViewController.swift in Sources */,
+				5BF7E89528F7BDE50024ECF8 /* HeroesMenuViewModel.swift in Sources */,
 				5BF7E87328F78F0A0024ECF8 /* iOSAvanzadoPractica.xcdatamodeld in Sources */,
-				5BF7E86D28F78F0A0024ECF8 /* ViewController.swift in Sources */,
 				5BF7E86928F78F0A0024ECF8 /* AppDelegate.swift in Sources */,
+				5BF7E89928F7CCBA0024ECF8 /* CoreDataManager.swift in Sources */,
+				5BF7E88828F792F00024ECF8 /* LoginViewModel.swift in Sources */,
 				5BF7E86B28F78F0A0024ECF8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,14 +251,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5BF7E86E28F78F0A0024ECF8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5BF7E86F28F78F0A0024ECF8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5BF7E87628F78F0B0024ECF8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -296,7 +388,6 @@
 				INFOPLIST_FILE = iOSAvanzadoPractica/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -324,7 +415,6 @@
 				INFOPLIST_FILE = iOSAvanzadoPractica/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
