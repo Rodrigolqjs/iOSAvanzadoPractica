@@ -6,10 +6,7 @@
 //
 
 import UIKit
-
-protocol LoginViewControllerProtocol {
-    func navigateToMenu()
-}
+import KeychainSwift
 
 class LoginViewController: UIViewController {
 
@@ -17,11 +14,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     
-    var viewModel: LoginViewModelProtocol? = LoginViewModel(network: NetworkModel())
+    var viewModel: LoginViewModel = LoginViewModel(network: NetworkModel())
+    var keyChain = KeychainSwift()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func onLoginTap(_ sender: Any) {
@@ -36,22 +33,15 @@ class LoginViewController: UIViewController {
             passwordTextField.text = "rlq12345"
             return
         }
-        
-        viewModel?.onLoginButtonTap(email: email, password: password, completion: { token in
-            self.viewModel?.saveToken(token: token)
-            let token = self.viewModel?.getToken()
-            self.viewModel?.navigateToHeroesMenu()
+         
+        viewModel.signIn(email: email, password: password, completion: { token in
+            print(token)
+            DispatchQueue.main.async {
+                let nextSB = UIStoryboard(name: "HeroesMenu", bundle: nil)
+                guard let nextVC = nextSB.instantiateInitialViewController() as? HeroesMenuViewController else { return print("no se pudo castear a HeroesMenuVC")}
+                self.navigationController?.setViewControllers([nextVC], animated: true)
+            }
         })
     }
 }
 
-extension LoginViewController: LoginViewControllerProtocol {
-    func navigateToMenu() {
-        let nextSB = UIStoryboard(name: "HeroesMenu", bundle: nil)
-        guard let nextVC = nextSB.instantiateInitialViewController() as? HeroesMenuViewController else { return }
-        nextVC.viewModel = HeroesMenuViewModel(viewDelegate: nextVC)
-        DispatchQueue.main.async {
-            self.navigationController?.setViewControllers([nextVC], animated: true)
-        }
-    }
-}

@@ -1,21 +1,6 @@
 
 import Foundation
-
-struct Hero: Decodable {
-    let photo: URL
-    let id: String
-    let favorite: Bool
-    let name: String
-    let description: String
-    var latitud: Double?
-    var longitude: Double?
-}
-
-struct HeroCoordenates: Decodable {
-    let latitud: String?
-    let longitud: String?
-    let id: String?
-}
+import KeychainSwift
 
 enum NetworkError: Error {
   case malformedURL
@@ -28,6 +13,7 @@ enum NetworkError: Error {
 class NetworkModel {
 
     private var token: String?
+    private var keyChain: KeychainSwift = KeychainSwift()
 
     convenience init(token: String) {
         self.init()
@@ -77,7 +63,8 @@ class NetworkModel {
     }
 
     func getHeroes(completion: @escaping ([Hero], Error?) -> Void) {
-        guard let url = URL(string: "https://vapor2022.herokuapp.com/api/heros/all"), let token = self.token else {
+        guard let url = URL(string: "https://vapor2022.herokuapp.com/api/heros/all"),
+              let token = keyChain.get("KCToken") else {
             completion([], NetworkError.malformedURL)
             return
         }

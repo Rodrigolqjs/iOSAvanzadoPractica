@@ -7,20 +7,11 @@
 
 import UIKit
 
-protocol HeroesMenuModelProtocol {
-    
-}
-
 class HeroesMenuViewModel {
 
-    var viewDelegate: HeroesMenuViewControllerProtocol?
     
-    init(viewDelegate: HeroesMenuViewControllerProtocol) {
-        self.viewDelegate = viewDelegate
+    init() {
     }
     
 }
 
-extension HeroesMenuViewModel: HeroesMenuModelProtocol {
-    
-}
