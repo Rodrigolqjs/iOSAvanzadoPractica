@@ -17,29 +17,36 @@ class LoginViewModel {
         self.coreDataManager = coreDataManager
     }
     
-    func signIn(email: String, password: String, completion: @escaping (_ token: String) -> Void) {
+    func signIn(email: String, password: String, completion: @escaping () -> Void) {
         network?.login(user: email, password: password) { token, error in
             self.keyChain.set(token ?? "fakeToken", forKey: "KCToken")
-            print("llego 1")
-            self.saveHeroes()
+
+            let heroes = self.coreDataManager.fetchHeroes()
+            guard !heroes.isEmpty else {
+                self.saveHeroes()
+                return
+            }
+//            PARA BORRAR COREDATA
+//            self.coreDataManager.deleteCoreData(entityName: "CharacterCD")
+//            self.coreDataManager.saveContext()
+            completion()
+            return
         }
     }
     
     func saveHeroes() {
-        network?.getHeroes(completion: { heroes, error in
-            print(error)
-            print(heroes)
+        network?.getHeroes(completion: { onlyHeroes, error in
+            var heroes = onlyHeroes
             heroes.forEach { hero in
-                print(hero)
                 self.network?.getLocalizacionHeroe(id: hero.id, completion: { coordenates, error in
+                    let coords = coordenates.first
                     let character = Hero(photo: hero.photo,
                                          id: hero.id,
                                          favorite: hero.favorite,
                                          name: hero.name,
                                          description: hero.description,
-                                         latitude: Double(coordenates.first?.latitude ?? "0.0") ?? 0.0,
-                                         longitude: Double(coordenates.first?.longitud ?? "0.0") ?? 0.0)
-                    
+                                         latitude: Double(coords?.latitud ?? "0.0") ?? 0.0,
+                                         longitude: Double(coords?.longitud ?? "0.0") ?? 0.0)
                     _ = CharacterCD.createCharacterCD(from: character, context: self.coreDataManager.context)
                     self.coreDataManager.saveContext()
                 })

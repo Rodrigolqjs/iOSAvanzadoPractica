@@ -22,8 +22,8 @@ extension CharacterCD {
         characterCD.favorite = hero.favorite
         characterCD.desc = hero.description
         characterCD.photo = hero.photo
-        characterCD.longitude = hero.longitude
-        characterCD.latitude = hero.latitude
+        characterCD.longitude = hero.longitude ?? 0.0
+        characterCD.latitude = hero.latitude ?? 0.0
         
         return characterCD
     }

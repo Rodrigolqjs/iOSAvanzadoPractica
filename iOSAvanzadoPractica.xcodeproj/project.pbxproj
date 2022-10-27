@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B298DEB29085CFB00352AA7 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B298DEA29085CFB00352AA7 /* MapViewModel.swift */; };
+		5B6C6A43290846BF00975D82 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6C6A42290846BF00975D82 /* MapViewController.swift */; };
 		5B7198F02901C200003DEA3A /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5B7198EF2901C200003DEA3A /* KeychainSwift */; };
 		5B7198F22901E43D003DEA3A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B7198F12901E43D003DEA3A /* TableViewCell.xib */; };
 		5B7198F62901E580003DEA3A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B7198F52901E580003DEA3A /* TableViewCell.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B298DEA29085CFB00352AA7 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		5B6C6A42290846BF00975D82 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		5B7198F12901E43D003DEA3A /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		5B7198F52901E580003DEA3A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		5B7198F82901E615003DEA3A /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
@@ -113,9 +117,9 @@
 			children = (
 				5B9231442906E9A600E2D5E0 /* CoreData */,
 				5BF7E88C28F7BDA10024ECF8 /* HeroesMenu */,
-				5BF7E88928F79EB30024ECF8 /* Utils */,
 				5BF7E87F28F78F9C0024ECF8 /* Login */,
 				5B7198F72901E5CA003DEA3A /* Extensions */,
+				5BF7E88928F79EB30024ECF8 /* Utils */,
 				5BF7E86828F78F0A0024ECF8 /* AppDelegate.swift */,
 				5BF7E86A28F78F0A0024ECF8 /* SceneDelegate.swift */,
 				5BF7E87428F78F0B0024ECF8 /* Assets.xcassets */,
@@ -192,6 +196,7 @@
 			children = (
 				5BF7E89228F7BDD00024ECF8 /* HeroesMenuViewController.swift */,
 				5B7198F52901E580003DEA3A /* TableViewCell.swift */,
+				5B6C6A42290846BF00975D82 /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF7E89428F7BDE50024ECF8 /* HeroesMenuViewModel.swift */,
+				5B298DEA29085CFB00352AA7 /* MapViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -290,12 +296,14 @@
 				5BF7E88628F792E50024ECF8 /* LoginViewController.swift in Sources */,
 				5BF7E89528F7BDE50024ECF8 /* HeroesMenuViewModel.swift in Sources */,
 				5B9231472906E9CB00E2D5E0 /* CharacterModel.swift in Sources */,
+				5B298DEB29085CFB00352AA7 /* MapViewModel.swift in Sources */,
 				5BF7E87328F78F0A0024ECF8 /* iOSAvanzadoPractica.xcdatamodeld in Sources */,
 				5B7198F62901E580003DEA3A /* TableViewCell.swift in Sources */,
 				5B7198F92901E615003DEA3A /* UIImageViewExtension.swift in Sources */,
 				5BF7E86928F78F0A0024ECF8 /* AppDelegate.swift in Sources */,
 				5BF7E88828F792F00024ECF8 /* LoginViewModel.swift in Sources */,
 				5B92314F2906EA5A00E2D5E0 /* CharacterCD+CoreDataProperties.swift in Sources */,
+				5B6C6A43290846BF00975D82 /* MapViewController.swift in Sources */,
 				5BF7E86B28F78F0A0024ECF8 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

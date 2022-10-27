@@ -7,16 +7,21 @@
 
 import UIKit
 
-
 class HeroesMenuViewController: UITableViewController {
 
     var viewModel = HeroesMenuViewModel()
-    //Completar con heroes de CoreData
-    //let heroes: [Hero]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Dragon Ball"
+        
+        tableView?.register(
+          UINib(nibName: "TableViewCell", bundle: nil),
+          forCellReuseIdentifier: "cellIdentifier"
+        )
+        
+        viewModel.viewDidLoad()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -26,17 +31,24 @@ class HeroesMenuViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-//        return heroes.count
-        return 0
+        return viewModel.characters.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath)
-        // Configure the cell...
-
-//        cell.set(model: heroes[indexPath.row])
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellIdentifier", for: indexPath) as? TableViewCell else {
+            let cell = UITableViewCell()
+            cell.textLabel?.text = "no content"
+            return cell
+        }
+        cell.set(model: viewModel.characters[indexPath.row])
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let nextVC: UIViewController = MapViewController()
+//        navigationController?.pushViewController(nextVC, animated: true)
+        performSegue(withIdentifier: "showmap", sender: nil)
     }
 
 }

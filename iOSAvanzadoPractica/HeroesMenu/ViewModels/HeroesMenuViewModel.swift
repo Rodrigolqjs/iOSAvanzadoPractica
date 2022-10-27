@@ -9,9 +9,21 @@ import UIKit
 
 class HeroesMenuViewModel {
 
+    var coreData: CoreDataManager
     
-    init() {
+    var characters: [Hero] = []
+    
+    init(coreData: CoreDataManager = CoreDataManager()) {
+        self.coreData = coreData
     }
     
+    func viewDidLoad() {
+        self.getCharacters()
+        print(characters)
+    }
+    
+    func getCharacters() {
+        characters = coreData.fetchHeroes().map({ $0.character })
+    }
 }
 

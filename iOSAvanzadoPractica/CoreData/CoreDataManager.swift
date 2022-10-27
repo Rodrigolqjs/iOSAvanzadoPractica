@@ -57,6 +57,22 @@ final class CoreDataManager {
         //Delete object
         saveContext()
     }
+    
+    func deleteCoreData(entityName: String) {
+        let context:NSManagedObjectContext = persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+        fetchRequest.returnsObjectsAsFaults = false
+        do {
+            let results = try context.fetch(fetchRequest)
+            for managedObject in results {
+                if let managedObjectData: NSManagedObject = managedObject as? NSManagedObject {
+                    context.delete(managedObjectData)
+                }
+            }
+        } catch let error as NSError {
+            print("Deleted all my data in myEntity error : \(error) \(error.userInfo)")
+        }
+    }
 }
 
 extension NSManagedObjectContext {

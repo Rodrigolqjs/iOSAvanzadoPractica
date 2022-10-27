@@ -34,12 +34,10 @@ class LoginViewController: UIViewController {
             return
         }
          
-        viewModel.signIn(email: email, password: password, completion: { token in
-            print(token)
+        viewModel.signIn(email: email, password: password, completion: {
             DispatchQueue.main.async {
-                let nextSB = UIStoryboard(name: "HeroesMenu", bundle: nil)
-                guard let nextVC = nextSB.instantiateInitialViewController() as? HeroesMenuViewController else { return print("no se pudo castear a HeroesMenuVC")}
-                self.navigationController?.setViewControllers([nextVC], animated: true)
+
+                self.performSegue(withIdentifier: "menuSB", sender: nil)
             }
         })
     }

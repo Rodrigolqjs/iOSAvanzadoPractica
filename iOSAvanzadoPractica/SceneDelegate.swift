@@ -6,19 +6,20 @@
 //
 
 import UIKit
+import KeychainSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var keyChain: KeychainSwift = KeychainSwift()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
         let login = UIStoryboard(name: "Login", bundle: nil)
-        
-        guard let destinationVC = login.instantiateInitialViewController() as? LoginViewController else { return }
+        guard let destinationVC = login.instantiateInitialViewController() as? LoginViewController else {return}
+//     
         
         let navigationController = UINavigationController(rootViewController: destinationVC)
         window.rootViewController = navigationController

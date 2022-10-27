@@ -13,12 +13,12 @@ struct Hero: Decodable {
     let favorite: Bool
     let name: String
     let description: String
-    var latitude: Double
-    var longitude: Double
+    var latitude: Double?
+    var longitude: Double?
 }
 
 struct HeroCoordenates: Decodable {
-    let latitude: String
-    let longitud: String
+    let latitud: String?
+    let longitud: String?
     let id: String
 }
