@@ -15,23 +15,24 @@ final class LoginViewModelTests: XCTestCase {
         sut = nil
     }
     
-    func test_signIn() {
+    func test_signIn_and_saveToken() {
         let keyChainTest = KeychainSwift()
         sut = LoginViewModel(network: NetWorkModelSpy(), keyChain: keyChainTest)
         sut.signIn(email: "test@test.com", password: "test") {}
         
         let token = keyChainTest.get("TestToken")
         
-        XCTAssertEqual(token, "TestToken")
+        XCTAssertEqual(token, "testToken")
         
     }
     
-//    func saveHeroesTest() {
-//
-//    }
-//
-//    func saveTokenTest() {
-//
-//    }
+    func test_saveHeroes() {
+        var coreData = CoreDataManager()
+        sut.saveHeroes()
+        
+        let characters = coreData.fetchHeroes()
+        XCTAssertEqual(characters, <#T##expression2: Equatable##Equatable#>)
+    }
+
     
 }

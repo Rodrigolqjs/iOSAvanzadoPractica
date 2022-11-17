@@ -1,8 +1,15 @@
-//
-//  CoreDataManagerSpy.swift
-//  IOSAvanzadoPracticaTests
-//
-//  Created by Rodrigo Latorre on 7/11/22.
-//
 
 import Foundation
+@testable import IOSAvanzadoPractica
+
+extension CoreDataManager {
+    
+    override func fetchHeroes(test: String) -> [CharacterCD] {
+        if (test == "test") {
+            CharacterCD.createCharacterCD(from: <#T##Hero#>, context: <#T##NSManagedObjectContext#>)
+            return CharacterCD()
+        }
+        return
+    }
+    
+}

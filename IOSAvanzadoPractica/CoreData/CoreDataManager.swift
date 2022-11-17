@@ -2,7 +2,7 @@
 import Foundation
 import CoreData
 
-final class CoreDataManager {
+class CoreDataManager {
     private lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "iOSAvanzadoPractica")
         container.loadPersistentStores { storeDescription, error in

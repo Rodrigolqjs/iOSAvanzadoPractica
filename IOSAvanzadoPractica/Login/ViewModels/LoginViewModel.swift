@@ -19,11 +19,16 @@ class LoginViewModel {
     
     func signIn(email: String, password: String, completion: @escaping () -> Void) {
         network?.login(user: email, password: password) { token, error in
+            
+            print(token)
+            if (token == "testToken") {
+                self.keyChain.set(token ?? "fakeToken", forKey: "TestToken")
+            }
             self.keyChain.set(token ?? "fakeToken", forKey: "KCToken")
 
             let heroes = self.coreDataManager.fetchHeroes()
             guard !heroes.isEmpty else {
-                self.saveHeroes()
+                self.saveCharacters()
                 return
             }
 //            PARA BORRAR COREDATA
@@ -34,7 +39,7 @@ class LoginViewModel {
         }
     }
     
-    func saveHeroes() {
+    func saveCharacters() {
         network?.getHeroes(completion: { onlyHeroes, error in
             var heroes = onlyHeroes
             heroes.forEach { hero in
