@@ -12,19 +12,27 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
+    var characterID: String = ""
     let viewModel = MapViewModel()
+    
+//    init(characterID: String, viewModel: MapViewModel = MapViewModel()) {
+//        self.viewModel = MapViewModel(characterID: characterID)
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        viewModel.characterID = characterID
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(loadHeroMap),
             name: Notification.Name("loadMap"),
             object: nil
         )
+        
+        viewModel.viewWillAppear()
         viewModel.checkLocationServices()
         setupMap()
 
@@ -39,9 +47,8 @@ class MapViewController: UIViewController {
     func setupMap() {
         mapView.showsUserLocation = true
         mapView.centerToLocation(location: CLLocation(
-            latitude: mapView.userLocation.coordinate.latitude,
-            longitude: mapView.userLocation.coordinate.longitude
-        )
+            latitude: 40.41,
+            longitude: -3.702)
         )
     }
 

@@ -36,7 +36,6 @@ class LoginViewController: UIViewController {
          
         viewModel.signIn(email: email, password: password, completion: {
             DispatchQueue.main.async {
-
                 self.performSegue(withIdentifier: "menuSB", sender: nil)
             }
         })

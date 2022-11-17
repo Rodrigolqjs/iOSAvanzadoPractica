@@ -41,7 +41,8 @@
 		5B92314C2906EA5A00E2D5E0 /* CharacterCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterCD+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5B92314D2906EA5A00E2D5E0 /* CharacterCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CharacterCD+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5B9231502906ED7C00E2D5E0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		5BF7E86528F78F0A0024ECF8 /* iOSAvanzadoPractica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSAvanzadoPractica.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BABEE932915C1D600B3374C /* LoginViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BF7E86528F78F0A0024ECF8 /* IOSAvanzadoPractica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSAvanzadoPractica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BF7E86828F78F0A0024ECF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BF7E86A28F78F0A0024ECF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5BF7E87228F78F0A0024ECF8 /* iOSAvanzadoPractica.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSAvanzadoPractica.xcdatamodel; sourceTree = "<group>"; };
@@ -58,6 +59,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5BABEE902915C1D600B3374C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BF7E86228F78F0A0024ECF8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -96,10 +104,18 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		5BABEE942915C1D600B3374C /* iOSAvanzadoPracticaTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iOSAvanzadoPracticaTests;
+			sourceTree = "<group>";
+		};
 		5BF7E85C28F78F0A0024ECF8 = {
 			isa = PBXGroup;
 			children = (
-				5BF7E86728F78F0A0024ECF8 /* iOSAvanzadoPractica */,
+				5BF7E86728F78F0A0024ECF8 /* IOSAvanzadoPractica */,
+				5BABEE942915C1D600B3374C /* iOSAvanzadoPracticaTests */,
 				5BF7E86628F78F0A0024ECF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,12 +123,13 @@
 		5BF7E86628F78F0A0024ECF8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5BF7E86528F78F0A0024ECF8 /* iOSAvanzadoPractica.app */,
+				5BF7E86528F78F0A0024ECF8 /* IOSAvanzadoPractica.app */,
+				5BABEE932915C1D600B3374C /* LoginViewModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5BF7E86728F78F0A0024ECF8 /* iOSAvanzadoPractica */ = {
+		5BF7E86728F78F0A0024ECF8 /* IOSAvanzadoPractica */ = {
 			isa = PBXGroup;
 			children = (
 				5B9231442906E9A600E2D5E0 /* CoreData */,
@@ -126,7 +143,7 @@
 				5BF7E87628F78F0B0024ECF8 /* LaunchScreen.storyboard */,
 				5BF7E87928F78F0C0024ECF8 /* Info.plist */,
 			);
-			path = iOSAvanzadoPractica;
+			path = IOSAvanzadoPractica;
 			sourceTree = "<group>";
 		};
 		5BF7E87F28F78F9C0024ECF8 /* Login */ = {
@@ -213,9 +230,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5BF7E86428F78F0A0024ECF8 /* iOSAvanzadoPractica */ = {
+		5BABEE922915C1D600B3374C /* LoginViewModelTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5BF7E87C28F78F0C0024ECF8 /* Build configuration list for PBXNativeTarget "iOSAvanzadoPractica" */;
+			buildConfigurationList = 5BABEE992915C1D600B3374C /* Build configuration list for PBXNativeTarget "LoginViewModelTests" */;
+			buildPhases = (
+				5BABEE8F2915C1D600B3374C /* Sources */,
+				5BABEE902915C1D600B3374C /* Frameworks */,
+				5BABEE912915C1D600B3374C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoginViewModelTests;
+			productName = LoginViewModelTests;
+			productReference = 5BABEE932915C1D600B3374C /* LoginViewModelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5BF7E86428F78F0A0024ECF8 /* IOSAvanzadoPractica */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BF7E87C28F78F0C0024ECF8 /* Build configuration list for PBXNativeTarget "IOSAvanzadoPractica" */;
 			buildPhases = (
 				5BF7E86128F78F0A0024ECF8 /* Sources */,
 				5BF7E86228F78F0A0024ECF8 /* Frameworks */,
@@ -225,12 +259,12 @@
 			);
 			dependencies = (
 			);
-			name = iOSAvanzadoPractica;
+			name = IOSAvanzadoPractica;
 			packageProductDependencies = (
 				5B7198EF2901C200003DEA3A /* KeychainSwift */,
 			);
 			productName = iOSAvanzadoPractica;
-			productReference = 5BF7E86528F78F0A0024ECF8 /* iOSAvanzadoPractica.app */;
+			productReference = 5BF7E86528F78F0A0024ECF8 /* IOSAvanzadoPractica.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -240,9 +274,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					5BABEE922915C1D600B3374C = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
 					5BF7E86428F78F0A0024ECF8 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -264,12 +301,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5BF7E86428F78F0A0024ECF8 /* iOSAvanzadoPractica */,
+				5BF7E86428F78F0A0024ECF8 /* IOSAvanzadoPractica */,
+				5BABEE922915C1D600B3374C /* LoginViewModelTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5BABEE912915C1D600B3374C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BF7E86328F78F0A0024ECF8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +330,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5BABEE8F2915C1D600B3374C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5BF7E86128F78F0A0024ECF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -322,6 +374,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5BABEE972915C1D600B3374C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5U2MYSX27B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RodrigoLatorre.LoginViewModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		5BABEE982915C1D600B3374C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5U2MYSX27B;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RodrigoLatorre.LoginViewModelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		5BF7E87A28F78F0C0024ECF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -446,6 +536,7 @@
 				DEVELOPMENT_TEAM = 5U2MYSX27B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSAvanzadoPractica/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ios Avanzado Practica";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -473,6 +564,7 @@
 				DEVELOPMENT_TEAM = 5U2MYSX27B;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSAvanzadoPractica/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Ios Avanzado Practica";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -493,6 +585,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5BABEE992915C1D600B3374C /* Build configuration list for PBXNativeTarget "LoginViewModelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BABEE972915C1D600B3374C /* Debug */,
+				5BABEE982915C1D600B3374C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5BF7E86028F78F0A0024ECF8 /* Build configuration list for PBXProject "iOSAvanzadoPractica" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -502,7 +603,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5BF7E87C28F78F0C0024ECF8 /* Build configuration list for PBXNativeTarget "iOSAvanzadoPractica" */ = {
+		5BF7E87C28F78F0C0024ECF8 /* Build configuration list for PBXNativeTarget "IOSAvanzadoPractica" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5BF7E87D28F78F0C0024ECF8 /* Debug */,

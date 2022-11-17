@@ -11,17 +11,46 @@
     </dependencies>
     <scenes>
         <!--Heroes Menu View Controller-->
+        <scene sceneID="u8P-yA-eij">
+            <objects>
+                <viewController id="7N4-Sw-ZmH" customClass="HeroesMenuViewController" customModule="iOSAvanzadoPractica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dPt-oe-c7k">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uyj-gF-bM0">
+                                <rect key="frame" x="0.0" y="91" width="390" height="719"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PqD-ve-rnM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uyj-gF-bM0" firstAttribute="bottom" secondItem="PqD-ve-rnM" secondAttribute="bottom" id="WSV-e6-DyG"/>
+                            <constraint firstItem="uyj-gF-bM0" firstAttribute="top" secondItem="PqD-ve-rnM" secondAttribute="top" id="d8g-dh-SeK"/>
+                            <constraint firstItem="uyj-gF-bM0" firstAttribute="leading" secondItem="PqD-ve-rnM" secondAttribute="leading" id="n2E-iH-V3U"/>
+                            <constraint firstItem="uyj-gF-bM0" firstAttribute="trailing" secondItem="PqD-ve-rnM" secondAttribute="trailing" id="xVD-iU-S1P"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3Iz-zA-pWt"/>
+                    <connections>
+                        <outlet property="tableView" destination="uyj-gF-bM0" id="uj2-Nv-URe"/>
+                        <segue destination="st6-mR-1dW" kind="show" identifier="showmap" id="iA3-Qq-oY2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GhY-6e-B7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2633.8461538461538" y="-28.436018957345969"/>
+        </scene>
+        <!--Heroes Menu View Controller-->
         <scene sceneID="Htd-4F-LgN">
             <objects>
                 <tableViewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="8cB-QX-kIi" customClass="HeroesMenuViewController" customModule="iOSAvanzadoPractica" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uo7-Q2-Zg8"/>
-                    <connections>
-                        <segue destination="st6-mR-1dW" kind="show" identifier="showmap" id="xBa-X8-KG0"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dkz-Bf-h4j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2715.3846153846152" y="-28.436018957345969"/>
+            <point key="canvasLocation" x="3500" y="-818"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="6kY-gg-hms">
@@ -65,7 +94,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="8cB-QX-kIi" kind="relationship" relationship="rootViewController" id="GNW-R7-jYg"/>
+                        <segue destination="7N4-Sw-ZmH" kind="relationship" relationship="rootViewController" id="Q54-mE-gdG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97p-1v-zFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

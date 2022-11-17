@@ -18,34 +18,57 @@ final class MapViewModel {
     private let keyChain = KeychainSwift()
 
     //MARK: Variable
-    var heroes: [Hero] = []
+    var characterID: String = ""
     var annotationsForMap: [MKPointAnnotation] = []
+    
+    func viewWillAppear() {
+        let coreDataCharacter = coreData.fetchHero(for: characterID).map({ $0.character })
+        guard let coreDataCharacter else { return }
+            fetchForMap(character: coreDataCharacter)
+            print(annotationsForMap)
 
+    }
+    
     func getHeroesById(hero: Hero) -> Hero {
         guard let heroRequested = self.coreData.fetchHero(for: hero.id) else { return hero }
         return heroRequested.character
     }
-
-    func fetchForMap() {
+    
+    func fetchForMap(character: Hero) {
         annotationsForMap = []
-        for hero in heroes {
             let annotations = MKPointAnnotation()
-            annotations.title = hero.name
-            guard let latitude = hero.latitude,
-                  let longitude = hero.longitude
+            annotations.title = character.name
+            guard let latitude = character.latitude,
+                  let longitude = character.longitude
             else { return }
             annotations.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
             annotationsForMap.append(annotations)
-        }
 
         NotificationCenter.default.post(name: Notification.Name("loadMap"), object: nil)
     }
 
+//    func fetchForMap(charactersCD: [Hero]) {
+//        annotationsForMap = []
+//        for character in charactersCD {
+//            let annotations = MKPointAnnotation()
+//            annotations.title = character.name
+//            guard let latitude = character.latitude,
+//                  let longitude = character.longitude
+//            else { return }
+//            annotations.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+//            annotationsForMap.append(annotations)
+//        }
+//
+//        NotificationCenter.default.post(name: Notification.Name("loadMap"), object: nil)
+//    }
+
     func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
+            print("entro a locationServices")
             checkLocationAuthorization()
         } else {
             // Show popUp to notify user
+            print("no entro a locationServices")
         }
     }
 
